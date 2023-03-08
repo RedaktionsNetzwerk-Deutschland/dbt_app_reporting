@@ -17,7 +17,7 @@ country_report_summed as (
 
 downloads_overview as (
     select *
-    from {{ ref('app_reporting_overview_report') }}
+    from {{ ref('app_reporting__overview_report') }}
 ),
 
 country_report_missing_downloads as (
