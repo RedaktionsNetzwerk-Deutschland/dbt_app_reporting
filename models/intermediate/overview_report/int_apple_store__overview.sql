@@ -10,7 +10,7 @@ subsetted as (
         date_day,
         'apple_store' as app_platform,
         app_name,
-        first_time_downloads
+        first_time_downloads,
         redownloads, 
         total_downloads,
         deletions,
