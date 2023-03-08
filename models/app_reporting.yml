@@ -12,6 +12,24 @@ models:
             - app_platform
             - app_name
             - app_version
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(first_time_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+          row_condition: app_platform='google_play'
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(redownloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+          row_condition: app_platform='google_play'
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(total_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+          row_condition: app_platform='google_play'
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
@@ -26,7 +44,7 @@ models:
       - name: redownloads
         description: '{{ doc("redownloads") }}. Only available for google play.'
       - name: total_downloads
-        description: '{{ doc("total_downloads") }}. Only available for google play.'
+        description: '{{ doc("total_downloads") }}. Only available for google.'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: crashes
@@ -76,6 +94,21 @@ models:
             - app_platform
             - app_name
             - device
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(first_time_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(redownloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(total_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
@@ -103,6 +136,21 @@ models:
             - app_platform
             - app_name
             - os_version
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(first_time_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(redownloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          expression: sum(total_downloads)
+          compare_model: ref("app_reporting__overview_report")
+          group_by: ["date_day","app_platform","app_name","app_version"]
+          compare_group_by: ["date_day", "app_platform", "app_name"]
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
