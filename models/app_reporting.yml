@@ -22,11 +22,11 @@ models:
       - name: app_version
         description: '{{ doc("app_version") }}'
       - name: first_time_downloads
-        description: '{{ doc("first_time_downloads") }}'
+        description: '{{ doc("first_time_downloads") }}. Only available for google play.'
       - name: redownloads
-        description: '{{ doc("redownloads") }}'
+        description: '{{ doc("redownloads") }}. Only available for google play.'
       - name: total_downloads
-        description: '{{ doc("total_downloads") }}'
+        description: '{{ doc("total_downloads") }}. Only available for google play.'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: crashes
