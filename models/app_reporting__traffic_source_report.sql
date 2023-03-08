@@ -10,7 +10,8 @@ final as (
         app_platform,
         app_name,
         traffic_source_type,
-        downloads,
+        total_downloads,
+        user_acquisitions,
         page_views
     from unioned
 )

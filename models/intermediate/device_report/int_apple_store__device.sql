@@ -11,6 +11,8 @@ subsetted as (
         'apple_store' as app_platform,
         app_name, 
         device,
+        sum(first_time_downloads) as first_time_downloads,
+        sum(redownloads) as redownloads,
         sum(total_downloads) as downloads,
         sum(deletions) as deletions
     from device_report

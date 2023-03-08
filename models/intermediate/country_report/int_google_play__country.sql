@@ -15,7 +15,9 @@ adapter as (
         region,
         sub_region,
         device_uninstalls as deletions,
-        device_installs as downloads,
+        device_installs as first_time_downloads,
+        install_events as total_downloads,
+        install_events - device_installs as redownloads,
         store_listing_visitors as page_views
     from country_report
 )

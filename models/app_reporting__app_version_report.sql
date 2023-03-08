@@ -10,6 +10,9 @@ final as (
         app_platform,
         app_name,
         app_version,
+        first_time_downloads,
+        redownloads,
+        total_downloads,
         deletions,
         crashes
     from unioned

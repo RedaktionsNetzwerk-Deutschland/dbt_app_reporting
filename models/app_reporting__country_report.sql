@@ -13,7 +13,9 @@ final as (
         country_short,
         region,
         sub_region,
-        downloads,
+        first_time_downloads,
+        redownloads,
+        total_downloads,
         deletions,
         page_views
     from unioned

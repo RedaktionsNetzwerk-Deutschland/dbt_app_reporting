@@ -21,6 +21,12 @@ models:
         description: '{{ doc("app_name") }}'
       - name: app_version
         description: '{{ doc("app_version") }}'
+      - name: first_time_downloads
+        description: '{{ doc("first_time_downloads") }}'
+      - name: redownloads
+        description: '{{ doc("redownloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }}'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: crashes
@@ -50,8 +56,12 @@ models:
         description: '{{ doc("region") }}'
       - name: sub_region
         description: '{{ doc("sub_region") }}'
-      - name: downloads
-        description: '{{ doc("downloads") }}'
+      - name: first_time_downloads
+        description: '{{ doc("first_time_downloads") }}'
+      - name: redownloads
+        description: '{{ doc("redownloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }}'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: page_views
@@ -75,8 +85,12 @@ models:
         description: '{{ doc("app_name") }}'
       - name: device
         description: '{{ doc("device") }}'
-      - name: downloads
-        description: '{{ doc("downloads") }}'
+      - name: first_time_downloads
+        description: '{{ doc("first_time_downloads") }}'
+      - name: redownloads
+        description: '{{ doc("redownloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }}'
       - name: deletions
         description: '{{ doc("deletions") }}'
 
@@ -98,8 +112,12 @@ models:
         description: '{{ doc("app_name") }}'
       - name: os_version
         description: '{{ doc("os_version") }}'
-      - name: downloads
-        description: '{{ doc("downloads") }}'
+      - name: first_time_downloads
+        description: '{{ doc("first_time_downloads") }}'
+      - name: redownloads
+        description: '{{ doc("redownloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }}'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: crashes
@@ -120,8 +138,12 @@ models:
         description: '{{ doc("app_platform") }}'
       - name: app_name
         description: '{{ doc("app_name") }}'
-      - name: downloads
-        description: '{{ doc("downloads") }}'
+      - name: first_time_downloads
+        description: '{{ doc("first_time_downloads") }}'
+      - name: redownloads
+        description: '{{ doc("redownloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }}'
       - name: deletions
         description: '{{ doc("deletions") }}'
       - name: page_views
@@ -147,7 +169,9 @@ models:
         description: '{{ doc("app_name") }}'
       - name: traffic_source_type
         description: '{{ doc("traffic_source_type") }}'
-      - name: downloads
-        description: '{{ doc("downloads") }}'
+      - name: total_downloads
+        description: '{{ doc("total_downloads") }} Only available in case of the apple store.'
+      - name: user_acquisitions
+        description: '{{ doc("user_acquisitions") }} Only available in case of the google play store.'
       - name: page_views
         description: '{{ doc("page_views") }}'

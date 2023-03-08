@@ -9,7 +9,9 @@ final as (
         date_day,
         app_platform,
         app_name, 
-        downloads,
+        first_time_downloads,
+        redownloads,
+        total_downloads,
         deletions,
         page_views,
         crashes

@@ -1,4 +1,4 @@
-with os_version_report as (
+with os_version_report as ( --unused
 
     select *
     from {{ ref('apple_store__platform_version_report') }}
@@ -11,7 +11,9 @@ subsetted as (
         'apple_store' as app_platform,
         app_name, 
         platform_version as os_version,
-        sum(total_downloads) as downloads,
+        sum(total_downloads) as total_downloads,
+        sum(first_time_downloads) as first_time_downloads,
+        sum(redownloads) as redownloads,
         sum(deletions) as deletions,
         sum(crashes) as crashes
     from os_version_report

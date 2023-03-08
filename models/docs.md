@@ -16,7 +16,13 @@
 
 {% docs device %} Device type associated with the respective metric(s). {% enddocs %}
 
-{% docs downloads %} The number of times your app has been downloaded onto a user's device. An individual user can have multiple device installs. {% enddocs %}
+{% docs first_time_downloads %} The number of devices which installed the app for the first time. This includes devices activations having the app preinstalled. {% enddocs %}
+
+{% docs total_downloads %} The number of times the app got installed. This includes devices reinstalling the application but excludes devices (re-)activations having the app preinstalled. {% enddocs %}
+
+{% docs redownloads %} total_downloads - first_time_downloads: This is an lower bound for the number of devices which reinstalled the app. Specifically it is the number of redownloads not counting reactivation of old devices with the app preinstalled, minus fresh devices having the app preinstalled. {% enddocs %}
+
+{% docs user_acquisitions %} The number of users, which installed or reinstalled the app after visiting the store page. The app was not installed on any other device of the user. {% enddocs %}
 
 {% docs page_views %} The number of times your app listing was viewed. {% enddocs %}
 

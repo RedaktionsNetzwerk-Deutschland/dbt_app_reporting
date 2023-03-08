@@ -14,7 +14,9 @@ subsetted as (
         territory_short as country_short,
         region,
         sub_region,
-        sum(total_downloads) as downloads,
+        sum(first_time_downloads) as first_time_downloads,
+        sum(redownloads) as redownloads,
+        sum(total_downloads) as total_downloads,
         sum(deletions) as deletions,
         sum(page_views) as page_views
     from country_report

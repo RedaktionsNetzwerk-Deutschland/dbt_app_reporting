@@ -10,7 +10,9 @@ final as (
         app_platform,
         app_name, 
         device,
-        downloads,
+        first_time_downloads,
+        redownloads,
+        total_downloads,
         deletions
     from unioned
 )

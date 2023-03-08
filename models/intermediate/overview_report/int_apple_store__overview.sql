@@ -9,8 +9,10 @@ subsetted as (
     select 
         date_day,
         'apple_store' as app_platform,
-        app_name, 
-        total_downloads as downloads,
+        app_name,
+        first_time_downloads
+        redownloads, 
+        total_downloads,
         deletions,
         page_views,
         crashes
