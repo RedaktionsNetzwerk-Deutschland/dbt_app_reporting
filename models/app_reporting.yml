@@ -12,21 +12,6 @@ models:
             - app_platform
             - app_name
             - app_version
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(first_time_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: app_platform='google_play' and date_sub(current_date(), INTERVAL 7 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(redownloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: app_platform='google_play' and date_sub(current_date(), INTERVAL 7 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(total_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: app_platform='google_play' and date_sub(current_date(), INTERVAL 7 DAY) > date_day
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
@@ -56,21 +41,6 @@ models:
             - app_platform
             - app_name
             - country_short
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(first_time_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 7 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(redownloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 7 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(total_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 7 DAY) > date_day
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'
@@ -106,21 +76,6 @@ models:
             - app_platform
             - app_name
             - device
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(first_time_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 28 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(redownloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 28 DAY) > date_day
-      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
-          expression: sum(total_downloads)
-          compare_model: ref("app_reporting__overview_report")
-          group_by: ["date_day", "app_platform", "app_name"]
-          row_condition: date_sub(current_date(), INTERVAL 28 DAY) > date_day
     columns:
       - name: date_day
         description: '{{ doc("date_day") }}'

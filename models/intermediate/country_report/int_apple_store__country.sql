@@ -4,12 +4,6 @@ with country_report as (
     from {{ ref('apple_store__territory_report') }}
 ),
 
-country_report_missing_downloads as (
-
-    select * 
-    from {{ ref('int_apple_store__missing_downloads') }}
-),
-
 subsetted as (
 
     select 
@@ -27,14 +21,7 @@ subsetted as (
         sum(page_views) as page_views
     from country_report
     {{ dbt_utils.group_by(7) }}
-),
-
-country_report_filled as (
-    select * from subsetted
-    union all
-    select * from country_report_missing_downloads
-    where first_time_downloads > 0 or redownloads > 0 or total_downloads > 0
 )
 
 select * 
-from country_report_filled
+from subsetted
