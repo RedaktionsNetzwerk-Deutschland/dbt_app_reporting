@@ -15,6 +15,7 @@ adapter as (
         install_events as total_downloads,
         device_uninstalls as deletions,
         store_listing_visitors as page_views,
+        store_listing_acquisitions as user_acquisitions,
         crashes
     from overview_report
 )

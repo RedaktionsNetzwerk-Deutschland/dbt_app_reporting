@@ -18,7 +18,8 @@ adapter as (
         device_installs as first_time_downloads,
         install_events as total_downloads,
         install_events - device_installs as redownloads,
-        store_listing_visitors as page_views
+        store_listing_visitors as page_views,
+        store_listing_acquisitions as user_acquisitions
     from country_report
 )
 

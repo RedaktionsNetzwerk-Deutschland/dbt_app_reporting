@@ -14,6 +14,7 @@ final as (
         total_downloads,
         deletions,
         page_views,
+        user_acquisitions,
         crashes
     from unioned
 )

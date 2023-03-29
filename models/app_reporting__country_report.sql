@@ -17,7 +17,8 @@ final as (
         redownloads,
         total_downloads,
         deletions,
-        page_views
+        page_views,
+        user_acquisitions
     from unioned
 )
 
