@@ -15,6 +15,7 @@ subsetted as (
         total_downloads,
         deletions,
         page_views,
+        CAST(NULL as int64) as user_acquisitions
         crashes
     from overview_report
 )

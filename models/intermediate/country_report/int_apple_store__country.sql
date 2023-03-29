@@ -18,7 +18,8 @@ subsetted as (
         sum(redownloads) as redownloads,
         sum(total_downloads) as total_downloads,
         sum(deletions) as deletions,
-        sum(page_views) as page_views
+        sum(page_views) as page_views,
+        CAST(NULL as int64) as user_acquisitions
     from country_report
     {{ dbt_utils.group_by(7) }}
 )
